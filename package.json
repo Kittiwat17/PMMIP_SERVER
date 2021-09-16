@@ -1,0 +1,23 @@
+{
+  "name": "pmmip-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "html-pdf": "^3.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "engines": {
+    "node": "14.15.4",
+    "yarn": "1.22.10"
+  },
+  "scripts": {
+    "dev": "node index.js",
+    "start": "nodemon start"
+  }
+}
