@@ -15,5 +15,9 @@
   "engines": {
     "node": "14.8.0",
     "yarn": "1.22.10"
+  },
+  "scripts": {
+    "dev": "node index.js",
+    "start": "node index.js"
   }
 }
