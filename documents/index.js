@@ -20,12 +20,13 @@ module.exports = ( {bmizscore, resultWeight, musclemassindex, resultMuscle, mmir
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Mitr:wght@300&display=swap" rel="stylesheet">
     <style>
         body{
             padding: 14px;
             font-size: 8px;
             font-family: 'Kanit', sans-serif;
+            font-family: 'Mitr', sans-serif;
         }
         .head {
             text-align: center;
@@ -34,6 +35,7 @@ module.exports = ( {bmizscore, resultWeight, musclemassindex, resultMuscle, mmir
             font-size: 20px;
             padding: 5px 5px 20px 5px;
             font-family: 'Kanit', sans-serif;
+            font-family: 'Mitr', sans-serif;
         }
         .box {
             width: auto;
@@ -88,7 +90,7 @@ module.exports = ( {bmizscore, resultWeight, musclemassindex, resultMuscle, mmir
 </head>
 <body>
     <div class="head">
-        <h2>ผลประเมิน</h2>
+        <h2 style='font-family: 'Mitr', sans-serif;'>ผลประเมิน</h2>
     </div>
     <div class='box'>
     <div class="contain">
