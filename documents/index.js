@@ -33,6 +33,7 @@ module.exports = ( {bmizscore, resultWeight, musclemassindex, resultMuscle, mmir
             height: 100px;
             font-size: 20px;
             padding: 5px 5px 20px 5px;
+            font-family: 'Kanit', sans-serif;
         }
         .box {
             width: auto;
