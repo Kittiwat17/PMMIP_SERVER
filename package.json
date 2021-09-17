@@ -17,6 +17,6 @@
     "yarn": "1.22.10"
   },
   "scripts": {
-    "start": "nodemon start"
+    "start": "node index.js"
   }
 }
