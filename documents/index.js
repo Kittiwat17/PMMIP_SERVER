@@ -18,10 +18,14 @@ module.exports = ( {bmizscore, resultWeight, musclemassindex, resultMuscle, mmir
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
     <style>
         body{
             padding: 14px;
             font-size: 8px;
+            font-family: 'Kanit', sans-serif;
         }
         .head {
             text-align: center;
