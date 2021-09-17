@@ -6,7 +6,7 @@ module.exports = ( {bmizscore, resultWeight, musclemassindex, resultMuscle, mmir
         } else if (weight == "น้ำหนักปกติ") {
           return "green"
         } else {
-          return "dodgerBlue"
+          return "#CCCC00"
         }
       }
     return `
@@ -83,14 +83,14 @@ module.exports = ( {bmizscore, resultWeight, musclemassindex, resultMuscle, mmir
             display: inline;
         }
         .conclusion {
-            color: orange;
+            color: blue;
             display: inline;
         }
     </style>
 </head>
 <body>
     <div class="head">
-        <h2 style='font-family: 'Mitr', sans-serif;'>ผลประเมิน</h2>
+        <h2 style="font-family: 'Mitr', sans-serif;">ผลประเมิน</h2>
     </div>
     <div class='box'>
     <div class="contain">
@@ -121,8 +121,8 @@ module.exports = ( {bmizscore, resultWeight, musclemassindex, resultMuscle, mmir
         <div style="float:left;width:49.5%;border: 1px solid lightgray;height:100%;padding: 1%;
         border-radius: 3px">
         <p style="padding-bottom: 7px;">คำแนะนำ</p>
-        <div class='conclusion-head'><i class="fa fa-line-chart" aria-hidden="true"></i> การแปรผลดัชนีมวลกล้ามเนื้อ : <div class='conclusion'>${resultMuscle}</div></div></br></br>
-        <div class='conclusion-head'><i class="fa fa-line-chart" aria-hidden="true"></i> การแปรผลดัชนีมวลกาย : <div class='conclusion'>${resultWeight}</div></div></br></br>
+        <div class='conclusion-head'><i class="fa fa-line-chart" aria-hidden="true"></i> การแปรผลดัชนีมวลกล้ามเนื้อ : <div class='conclusion' style='color: ${resultMuscle=="มวลกล้ามเนื้อน้อย"? 'red':'green'}'>${resultMuscle}</div></div></br></br>
+        <div class='conclusion-head'><i class="fa fa-line-chart" aria-hidden="true"></i> การแปรผลดัชนีมวลกาย : <div class='conclusion' style='color:${checkWeight(resultWeight)};'>${resultWeight}</div></div></br></br>
         <div class='conclusion-head'><i class="fa fa-line-chart" aria-hidden="true"></i> การแปรผลดังนีกล้ามเนื้อและดัชนีมวลกาย : <div class='conclusion'>${mmiresult}</div></div></br></br>
         <div class='conclusion-head'><i class="fa fa-coffee" aria-hidden="true"></i> อาหาร : <div class='conclusion'>${food}</div></div></br></br>
         <div class='conclusion-head'><i class="fa fa-male" aria-hidden="true"></i> กิจกรรมทางกาย : <div class='conclusion'>${physicalActivity}</div></div></br></br>
@@ -139,10 +139,10 @@ module.exports = ( {bmizscore, resultWeight, musclemassindex, resultMuscle, mmir
         <div class='conclusion-head'><i class="fa fa-male" aria-hidden="true"></i> ส่วนสูง : <div class='conclusion'>${height}</div> เซนติเมตร</div></br></br>
         <div class='conclusion-head'><i class="fa fa-hand-rock-o" aria-hidden="true"></i> แรงบีบมือ : <div class='conclusion'>${gripstrength==""?'ไม่พบข้อมูล':gripstrength}</div> กิโลกรัม</div></br></br>
         <div class='conclusion-head'><i class="fa fa-line-chart" aria-hidden="true"></i> ดัชนีมวลกล้ามเนื้อ : <div class='conclusion'>${musclemassindex.toFixed(2)}</div> กิโลกรัม/เมตร<sup>2</sup></div></br></br>
-        <div class='conclusion-head'><i class="fa fa-line-chart" aria-hidden="true"></i> การแปรผลดัชนีมวลกล้ามเนื้อ : <div class='conclusion'>${resultMuscle}</div></div></br></br>
+        <div class='conclusion-head'><i class="fa fa-line-chart" aria-hidden="true"></i> การแปรผลดัชนีมวลกล้ามเนื้อ : <div class='conclusion' style='color: ${resultMuscle=="มวลกล้ามเนื้อน้อย"? 'red':'green'}'>${resultMuscle}</div></div></br></br>
         <div class='conclusion-head'><i class="fa fa-line-chart" aria-hidden="true"></i> ดัชนีมวลกาย(BMI) : <div class='conclusion'>${bmi.toFixed(2)}</div></div></br></br>
         <div class='conclusion-head'><i class="fa fa-line-chart" aria-hidden="true"></i> ดัชนีมวลกาย(Z-score) : <div class='conclusion'>${bmizscore.toFixed(2)}</div></div></br></br>
-        <div class='conclusion-head'><i class="fa fa-line-chart" aria-hidden="true"></i> การแปรผลดัชนีมวลกาย : <div class='conclusion'>${resultWeight}</div></div></br></br>
+        <div class='conclusion-head'><i class="fa fa-line-chart" aria-hidden="true"></i> การแปรผลดัชนีมวลกาย : <div class='conclusion' style='color:${checkWeight(resultWeight)};'>${resultWeight}</div></div></br></br>
         <div class='conclusion-head'><i class="fa fa-line-chart" aria-hidden="true"></i> การแปรผลดัชนีกล้ามเนื้อและดัชนีมวลกาย : <div class='conclusion'>${mmiresult}</div></div></br></br>
         <div class='conclusion-head'><i class="fa fa-coffee" aria-hidden="true"></i> อาหาร : <div class='conclusion'>${food}</div></div></br></br>
         <div class='conclusion-head'><i class="fa fa-male" aria-hidden="true"></i> กิจกรรมทางกาย : <div class='conclusion'>${physicalActivity}</div></div></br></br>
